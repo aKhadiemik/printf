@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 				case 'c':
 					int c = va_arg(args, int);
 
-					fputc(c, stdout);
+					_putchar(c);
 					++count;
 					break;
 				case 's':
@@ -33,18 +33,18 @@ int _printf(const char *format, ...)
 
 					for (; *str != '\0'; ++str)
 					{
-						fputc(*str, stdout);
+						_putchar(*str);
 						++count;
 					}
 					break;
 				case '%':
-					fputc('%', stdout);
+					_putchar('%');
 					++count;
 			}
 		}
 		else
 		{
-			fputc(*p, stdout);
+			_putchar(*p);
 			++count;
 		}
 	}
