@@ -13,23 +13,25 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0;
+	int count = 0, c;
+	const char *p;
+	char *str;
 
 	va_start(args, format);
-	for (const char *p = format; *p != '\0'; ++p)
+	for (p = format; *p != '\0'; ++p)
 	{
 		if (*p == '%')
 		{
 			switch (*(++p))
 			{
 				case 'c':
-					int c = va_arg(args, int);
+					c = va_arg(args, int);
 
 					_putchar(c);
 					++count;
 					break;
 				case 's':
-					char *str = va_arg(args, char *);
+					str = va_arg(args, char *);
 
 					for (; *str != '\0'; ++str)
 					{
