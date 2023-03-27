@@ -16,6 +16,9 @@ int _printf(const char *format, ...)
 	int count = 0, c;
 	const char *p;
 	char *str;
+	
+	if (!format)
+		return (-1);
 
 	va_start(args, format);
 	for (p = format; *p != '\0'; ++p)
@@ -42,6 +45,12 @@ int _printf(const char *format, ...)
 				case '%':
 					_putchar('%');
 					++count;
+					break;
+				default:
+					_putchar('%');
+					_putchar(*p);
+					count += 2;
+					break;
 			}
 		}
 		else
