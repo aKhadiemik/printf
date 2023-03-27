@@ -13,6 +13,7 @@
  * @specifier: The conversion specifier character
  * @f: The function to use for the specifier
  */
+
 typedef struct specifier_func
 {
 	char specifier;
