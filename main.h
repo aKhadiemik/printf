@@ -15,8 +15,8 @@
  */
 typedef struct specifier_func
 {
-    char specifier;
-    int (*f)(va_list, char *, int, int);
+	char specifier;
+	int (*f)(va_list, char *, int, int);
 } specifier_func_t;
 
 int _putchar(char character);
