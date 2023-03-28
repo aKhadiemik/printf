@@ -13,7 +13,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int count = 0, c;
+	int count = 0, c, d;
 	const char *p;
 	char *str;
 	
@@ -44,11 +44,11 @@ int _printf(const char *format, ...)
 					break;
 				case 'd':
 					d = va_arg(args, int);
-					digit(d);
+					count = digit(d, count);
 					break;
 				case 'i':
 					d = va_arg(args, int);
-					digit(d);
+					count = digit(d, count);
 					break;
 				case '%':
 					_putchar('%');

@@ -25,7 +25,7 @@ int print_char(va_list args, char *buffer, int flags, int width);
 int print_string(va_list args, char *buffer, int flags, int width);
 int print_percent(va_list args, char *buffer, int flags, int width);
 int _printf(const char *format, ...);
-void digit(int d);
+int digit(int d, int count);
 /**
  * int print_int(va_list args, char *buffer, int flags, int width);
  * int print_unsigned(va_list args, char *buffer, int flags, int width);
