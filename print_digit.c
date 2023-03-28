@@ -19,6 +19,14 @@ int print_digit(int d, int count)
 		count++;
 		d = -d;
 	}
+	if (d == INT_MIN)
+	{
+		_putchar('-');
+		count++;
+		count = print_digit(INT_MAX / 10, count);
+		_putchar((INT_MAX % 10 + 1) + '0');
+		count++;
+	}
 	if (d == 0)
 	{
 		_putchar('0');

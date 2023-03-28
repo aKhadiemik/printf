@@ -13,6 +13,7 @@
 void print_format(va_list args, const char **p, int *count)
 {
 	int c, d;
+	unsigned int u;
 	char *str;
 
 	switch (*(++(*p)))
@@ -22,7 +23,6 @@ void print_format(va_list args, const char **p, int *count)
 		_putchar(c);
 		++(*count);
 		break;
-
 	case 's':
 		str = va_arg(args, char *);
 		for (; *str != '\0'; ++str)
@@ -31,21 +31,20 @@ void print_format(va_list args, const char **p, int *count)
 			++(*count);
 		}
 		break;
-
+	case 'i':
 	case 'd':
 		d = va_arg(args, int);
 		*count = print_digit(d, *count);
 		break;
-	case 'i':
-		d = va_arg(args, int);
-		*count = print_digit(d, *count);
+	case 'u':
+		u = va_arg(args, unsigned int);
+		*count = print_udigit(u, *count);
 		break;
 
 	case '%':
 		_putchar('%');
 		++(*count);
 		break;
-
 	default:
 		_putchar('%');
 		_putchar(*(*p));
