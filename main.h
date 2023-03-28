@@ -27,16 +27,7 @@ int print_string(va_list args, char *buffer, int flags, int width);
 int print_percent(va_list args, char *buffer, int flags, int width);
 int print_digit(int d, int count);
 void print_format(va_list args, const char **p, int *count);
-/**
- * int print_int(va_list args, char *buffer, int flags, int width);
- * int print_unsigned(va_list args, char *buffer, int flags, int width);
- * int print_binary(va_list args, char *buffer, int flags, int width);
- * int print_octal(va_list args, char *buffer, int flags, int width);
- * int print_hex(va_list args, char *buffer, int flags, int width);
- * int print_HEX(va_list args, char *buffer, int flags, int width);
- * int print_rot13(va_list args, char *buffer, int flags, int width);
- */
 
-int handle_format(const char *format, va_list args, char *buffer, int buffer_index);
+int handle_format(const char *format, va_list args, char *buff, int buff_idx);
 
 #endif /* MAIN_H */
