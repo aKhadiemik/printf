@@ -1,10 +1,14 @@
 #include "main.h"
+
 /**
- * digit - function top print digit
+ * print_digit - function top print digit
+ *
  * @d: digit to be printed
  * @count: lenght count of current string
+ *
  * Return: len of digit
  */
+
 int print_digit(int d, int count)
 {
 	int rev_d;
