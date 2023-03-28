@@ -33,9 +33,12 @@ void print_format(va_list args, const char **p, int *count)
 		break;
 
 	case 'd':
+		d = va_arg(args, int);
+		*count = print_digit(d, *count);
+		break;
 	case 'i':
 		d = va_arg(args, int);
-		*count += print_digit(d, *count);
+		*count = print_digit(d, *count);
 		break;
 
 	case '%':

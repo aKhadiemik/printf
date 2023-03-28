@@ -5,7 +5,7 @@
  * @count: lenght count of current string
  * Return: len of digit
  */
-int digit(int d, int count)
+int print_digit(int d, int count)
 {
 	int rev_d;
 
