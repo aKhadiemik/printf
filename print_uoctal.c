@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * uoctal - function top print octal
+ * print_uoctal - function top print octal
  * @u: digit to be printed
  * @count: lenght count of current string
  * Return: len of digit
  */
-int uoctal(unsigned int u, int count)
+int print_uoctal(unsigned int u, int count)
 {
 	unsigned int rev_u;
 

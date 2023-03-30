@@ -9,10 +9,9 @@
  *
  * Return: void
  */
-
 void print_format(va_list args, const char **p, int *count)
 {
-	int c, d;
+	long int c, d;
 	unsigned int u;
 	char *str;
 
@@ -40,7 +39,6 @@ void print_format(va_list args, const char **p, int *count)
 		u = va_arg(args, unsigned int);
 		*count = print_udigit(u, *count);
 		break;
-
 	case '%':
 		_putchar('%');
 		++(*count);
@@ -50,5 +48,5 @@ void print_format(va_list args, const char **p, int *count)
 		_putchar(*(*p));
 		*count += 2;
 		break;
-}
+	}
 }

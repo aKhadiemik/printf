@@ -29,6 +29,7 @@ int print_string(va_list args, char *buffer, int flags, int width);
 int print_percent(va_list args, char *buffer, int flags, int width);
 int print_digit(int d, int count);
 int print_udigit(unsigned int d, int count);
+int print_uoctal(unsigned int d, int count);
 void print_format(va_list args, const char **p, int *count);
 
 int handle_format(const char *format, va_list args, char *buff, int buff_idx);
